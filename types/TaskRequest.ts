@@ -1,4 +1,4 @@
 export type TaskRequest = {
-    finishPrevisionDate: Date;
-    name: string;
+    finishPrevisionDate : Date
+    name : string
 }

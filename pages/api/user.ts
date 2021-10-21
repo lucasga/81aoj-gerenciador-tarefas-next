@@ -11,7 +11,7 @@ const handler = async( req : NextApiRequest, res : NextApiResponse<DefaultRespon
             return res.status(400).json({ error: 'Metodo informado nao esta disponivel.'});
         }
 
-        const obj: User = req.body;
+        const obj : User = req.body;
 
         if(!obj.name || obj.name.length < 3 || !obj.email || obj.email.length < 6
             || !obj.password || obj.password.length < 4){
