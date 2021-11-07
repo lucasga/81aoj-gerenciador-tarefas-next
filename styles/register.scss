@@ -1,6 +1,6 @@
 @import "./config.scss";
 
-.container-login {
+.container-register {
   .logo {
     width: 178.35px;
     display: block;
@@ -11,6 +11,13 @@
   .error {
     text-align: center;
     color: $errorColor;
+    font-weight: bold;
+    max-width: 300px;
+  }
+
+  .success {
+    text-align: center;
+    color: $successColor;
     font-weight: bold;
     max-width: 300px;
   }
@@ -99,6 +106,10 @@
       max-width: none;
     }
 
+    .success {
+      max-width: none;
+    }
+
     form {
       border-style: solid;
       border-color: $primaryColor;
@@ -113,6 +124,10 @@
       .input {
         img {
           width: 20px;
+        }
+
+        .smallIcon {
+          width: 16px;
         }
 
         input {

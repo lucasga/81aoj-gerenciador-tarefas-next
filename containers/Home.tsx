@@ -7,11 +7,11 @@ import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { List } from "../components/List";
 import { executeRequest } from "../services/api";
-import { AccessTokenProps } from "../types/AccessTokenProps";
+import { LoginProps } from "../types/LoginProps";
 import { Task } from "../types/Task";
 
 /* eslint-disable @next/next/no-img-element */
-const Home: NextPage<AccessTokenProps> = ({ setToken }) => {
+const Home: NextPage<LoginProps> = ({ setToken }) => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [finishPrevisionDateStart, setFinishPrevisionDateStart] = useState("");
   const [finishPrevisionDateEnd, setFinishPrevisionDateEnd] = useState("");

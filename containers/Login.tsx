@@ -2,10 +2,10 @@ import { useState } from "react";
 import axios from "axios";
 import { executeRequest } from "../services/api";
 import { NextPage } from "next";
-import { AccessTokenProps } from "../types/AccessTokenProps";
+import { LoginProps } from "../types/LoginProps";
 
 /* eslint-disable @next/next/no-img-element */
-export const Login: NextPage<AccessTokenProps> = ({ setToken }) => {
+export const Login: NextPage<LoginProps> = ({ setIsRegister, setToken }) => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -78,6 +78,13 @@ export const Login: NextPage<AccessTokenProps> = ({ setToken }) => {
         >
           {isLoading ? "...Carregando" : "Login"}
         </button>
+        {setIsRegister && (
+          <div className="linkWrapper">
+            <a className="link" onClick={() => setIsRegister(true)}>
+              Registrar-se
+            </a>
+          </div>
+        )}
       </form>
     </div>
   );
